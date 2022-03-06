@@ -1,79 +1,203 @@
 @charset "UTF-8";
-@font-face {
-    font-family: 'idroid';
-    src: url(fontes/idroid.otf) format('truetype');
 
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
+@font-face {
+    font-family:'android';
+    src:url(fontes/idroid.otf) format('opentype');
+    font-weight: normal;
 }
 
 :root{
---blue:#023859;
---light-blue:#0367A6;
---blue-text:#011826;
+    --cor01:#e8e3f3;
+    --cor02:#bdabeb;
+    --cor03:#8f77cc;
+    --cor04:#553f8d;
+    --cor05:#1a0a42;
+
+    --fonte-padrão:arial,verdana,helvetica,sans-serif;
+    --fonte-destaque:'bebas neus', arial;
+    --fonte-android:'android', arial;
 }
-body{
-    background-color: var(--blue);
-    font-family: Arial, Helvetica, sans-serif;
+
+*{
     margin: 0px;
+    padding: 0px;
 }
+
+a.externo::after{
+    content: '\00A0\1F517';/*Adicionando o ícone aos links externos*/
+}
+
+body{
+    background-color: var(--cor01);
+    font-family:var(--fonte-padrão);
+}
+
 header{
-    background-image: linear-gradient(to bottom, #0367A6, #023859);
-    padding-top: 1px;
+    background-color: var(--cor04);
+    min-height: 150px;
+    text-align: center;
+    padding-top: 40px;
+    background-image:linear-gradient(to bottom, var(--cor03), var(--cor05));
+}
+
+header > h1{
     color: #ffff;
+    font-family: var(--fonte-destaque);
+    font-size: 3em;
+    margin-bottom: 30px;
+    text-shadow: 4px 4px 0px rgba(0, 0, 0, 0.322);
 }
-main{
-    background-color: #ffff;
-    border-radius: 0px 0px 5px 5px;
-    margin-left: 175px;
-    margin-right: 175px;
-    text-align: justify;
-}
-section{
-    margin: 20px;
-}
-.bordão{
-    text-align: center;
-}
-h1{
-    text-align: center;
-    font-size: 2em;
-}
-h2{
-    font-family:'idroid';
-    font-size: 2em;
-    font-weight: 700;
-    color: var(--blue-text);
-    padding: 10px;
-}
-h3{
-    background-image: linear-gradient(to right, #009dff8c, #ffff);
-    font-family:'idroid';
-    font-size: 1.5em;
-    font-weight: 700;
-    color: var(--blue-text);
+
+header > p{
+    color: #fff;
+    font-size: 1.3em;
+    font-family: var(--fonte-padrão);
+    max-width: 500px;
+    padding-bottom: 30px;
     padding-left: 10px;
+    padding-right: 10px;
+    margin: auto;
+    text-shadow: 3px 3px 0px rgba(0, 0, 0, 0.377);
 }
-p{
-    text-indent: 20px;
-    text-align: justify;
-}
+
 nav{
-    margin-left: 15px;
+    background-color: var(--cor05);
+    padding: 10px;
+    box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.315);
 }
-nav > a{
-    color: #ffff;
+
+nav a{
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
     text-decoration: none;
-    margin-right: 5px;
+    font-weight: bold;
+    transition-duration: 1s;/*intervalo para a ativação*/
 }
+
 nav > a:hover{
+    background-color: var(--cor01);
+    color: var(--cor05);
+}
+
+main{
+    margin: auto; /*manter o main sempre ao cento*/
+    min-width: 300px;
+    max-width: 1000px;/*determina até onde a main irá se expandir, ajustando às larguras das mais diversas telas*/
+    background-color: #FFF;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+main p{
+    margin: 20px 0px;
+    text-align: justify;
+    text-indent: 20px;
+    font-size: 1.2em;
+    line-height: 1.7em;/*altura da linha*/
+}
+
+main strong{
+    color: var(--cor05);
+    font-weight: bold;
+}
+
+main a{
+    text-decoration: none;
+    font-weight: bold;
+    color: var(--cor04);
+}
+
+main a:hover{
     text-decoration: underline;
+    background-color: var(--cor01);
+    padding: 2px 2px;
+    transition-duration: .5s;
+}
+
+main h1{
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    color: var(--cor05);
+    text-indent: 20px;
+}
+
+main h2{
+    font-family: var(--fonte-android);
+    font-weight: normal;
+    color: var(--cor04);
+    background-image: linear-gradient(to right, var(--cor01), transparent);
+    text-indent: 20px;
+    font-size: 1.3em;
+}
+
+.imagem{
+    width: 100%;/*manter a imagem ocupando 100% da largura*/
+}
+
+#bugdroid{
+    max-width: 400px;
+    display: block;/*uma img não é um bloco, então não se alinhará ao centro sem o display block*/
+    margin: auto;
+}
+
+div.video{
+    background-color: var(--cor05);
+    margin: 0px -20px 30px -20px;
+    padding: 20px;
+    padding-bottom: 57%;
+    position: relative;
+}
+
+div.video > iframe{
+    position: absolute;
+    top: 5%;
+    left: 5%;
+    width: 90%;
+    height: 90%;
+}
+
+aside{
+    background-color: var(--cor01);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.274);
+}
+
+aside h3{
+    background-color: var(--cor04);
+    color: #FFF;
+    padding: 10px;
+    margin: -10px -10px 0px -10px;/*crescendo a margim para fora*/
+    border-radius: 5px 5px 0px 0px;
+}
+
+aside ul{
+    list-style-type: '\2714\00A0\00A0';/*2714 é o código do sinal de confere; 00A0 é espaço entre o símbolo e palavra*/
+    list-style-position: inside; /*colocando a lista dentro do aside*/
+    columns: 2; /*número de colunas da lista*/
 }
 
 footer{
-    background-color: black;
-    color: #ffff;
+    background-color: var(--cor05);
+    color: #fff;
     text-align: center;
-    padding: 8px;
+    font-size: 0.8em;
+    padding: 5px;
 }
-.p{
-    padding: 20px;
+
+footer a{
+    color: #fff;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+footer a:hover{
+    text-decoration: underline;
+    color: var(--cor01);
 }
