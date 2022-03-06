@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exemplo de Hover</title>
+    <style>
+        body{
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+        div > p{
+            /*
+            O sìmbolo > se refere ao 'filho da div'
+            */
+            display: none;
+            /*None = não mostre nada*/
+        }
+        div:hover > p{
+            /*
+            A pseudo-class hover possibilita, quando passo  o mouse em cima do texto, apareça o texto escondido.
+            */
+            display: block;
+            color: rgb(255, 255, 255);
+            background-color: rgb(0, 0, 0);
+            width: 300px;
+        }
+        div:hover {
+            color: crimson;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exemplo de Hover</h1>
+    <p>Passe o mouse sobre o texto abaixo</p>
+    <div>Passe o mouse aqui
+        <p>Texto Escondido...</p>
+    </div>
+    <p>Fim de Exemplo</p>
+</body>
+</html>

@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Links</title>
+    <style>
+        /* seletores
+          #  = id
+          .  = class
+          :  = pseudo-class
+          :: = pseudo-element
+          >  = children
+        */
+        a{
+            color: blue;
+            text-decoration: none;/*Elemento none o sublinhado padrão do link*/
+            font-weight: bolder;
+        }
+
+        a:visited{/*Essa pseudo-class modifica a aparência do link já visitado*/
+            color: magenta;
+        }
+
+        a:hover{
+            color: rgba(82, 0, 82, 0.637);
+            text-decoration: underline;/*Modificou para sublinhado(underline) ao passar o mouse*/
+        }
+        a:active{/*Essa pseudo-class modifica o link quando clicado*/
+            color: yellow;
+        }
+
+        a::before{/*Pseudo-elemento que adiciona um conteúdo antes das informações principais*/
+            content: '⇒';
+        }
+
+        a::after{/*Pseudo-elemento que adiciona um conteúdo depois das informações principais*/
+            content: '⇐';
+        }
+    </style>
+</head>
+<body>
+    <h1>Personalizando Links</h1>
+    <ul>
+        <li><a href="https://github.com/Luan-0liveira" target="_blank">Repositório GitHub</a></li>
+
+        <li><a href="https://www.youtube.com/channel/UCdOMHksFReq27B6hhBxmWIg" target="_blank">Canal do Youtube</a></li>
+
+        <li><a href="https://www.google.com/" target="_blank">Site do Google</a></li>
+    </ul>
+</body>
+</html>

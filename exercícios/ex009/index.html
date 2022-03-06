@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mídias em HTML</title>
+</head>
+<body>
+    <h1>Imagens Dinâmicas</h1>
+    <p>Tente abrir este site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador</p>
+
+    <picture>
+
+        <source media="(max-width:700px )" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width:800px )" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="Imagem flexível">
+        <!--A ordem na tag picture é muito importante, a imagem grande precisa estar mais abaixo e a menor acima, mantendo ordem do menor ao maior(de cima para baixo)-->
+
+        <h1>Reproduzindo áudio em HTML5</h1>
+        <p>Vamos aprender a reproduzir áudio em HTML5</p>
+
+        <audio preload="metadata" controls loop> 
+            <!--Preload deixa o desenvolvedor escolher entre carregar o site junto com ao áudio (auto), ou carregar apenas suas informações (metadata), e a none que só aparece as informações quando o usuário preciona o play-->
+
+            <source src="midia/takeoff.mp3" type="audio/mpeg">
+            <source src="midia/takeoff.ogg" type="audio/ogg">
+            <source src="midia/takeoff.wav" type="audio/wav">
+            <!--O navegador irá testar cada uma das opções de áudio acima até encontrar uma opção compatível-->
+
+        </audio>
+        
+        <p>Se infelizmente você não consegue abrir o áudio. <a href="midia/takeoff.mp3" download="takeoff.mp3" type="audio/mpeg">Clique aqui para baixar o áudio</a></p>
+
+    </picture>
+</body>
+</html> 

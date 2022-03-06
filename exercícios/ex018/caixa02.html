@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agruping tags</title>
+    <style>
+        body{
+            font-family:Arial, Helvetica, sans-serif;
+            background-color: rgba(122, 228, 255, 0.5);
+            margin: 0%;
+        }
+        header{
+            background-color: rgba(255, 255, 255, 0.479);
+            padding: 10px;
+            margin: 2px;
+            text-align: center;
+        }
+        nav{
+            background-color: teal;
+            padding: 3px;
+            text-align: center;
+            box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.342); /*sombra em nav, 1° deslocamento horizontal, 2° deslocamento vertical, 3º espalhamento e último cor*/
+        }
+        nav > a{
+            text-decoration: none;
+            color: rgb(255, 255, 255);
+            font-weight: 500;
+            margin-right: 10px;
+        }
+        nav > a:hover{
+            text-decoration: underline;
+        }
+        main{
+            background-color: teal;
+            padding: 10px;
+            margin: 2px;
+            border-radius: 20px 0px;
+            box-shadow: 2px 3px 5px rgba(0, 0, 0, 0.377);
+}
+        }
+       .assunto{
+           font-weight: bolder;
+           background-color: white;
+       }
+       .assunto > p{
+           color: white;
+           font-weight: bolder;
+
+       }
+       article{
+           background-color: white;
+           padding: 5px;
+           border-radius: 20px 0px;
+       }
+       .escritor{
+           background-color: teal;
+       }
+       aside{
+           color: white;
+       }
+       footer{
+           background-color: black;
+           color: white;
+           margin: 6px;
+           text-align: center;
+       }
+       footer > p{
+           margin: 0px;
+       }
+
+    </style>
+
+</head>
+<body>
+    <header>
+        <h1>MEU SITE</h1>
+        <nav>
+            <a href="#">Notícias</a>
+            <a href="#">Mangá</a>
+            <a href="#">Anime</a>
+            <a href="#">Especulações</a>
+        </nav>
+    </header>    
+    <main>
+        <section id="assunto">
+            <p>Tudo sobre o One piece</p>
+            <article>
+                <h2>Dracula</h2>
+                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. At magni aliquam eaque cupiditate rem quam autem vitae quod repellendus, sunt molestiae vero eius. Deserunt quos, amet ullam odio quaerat sunt.</p>
+                <section id="escritor">
+                    <aside>Escritou por Mihawk Dracule</aside>
+                </section>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Desenvolvido por Dracule Mihawk</p>
+    </footer>
+</body>
+</html>
