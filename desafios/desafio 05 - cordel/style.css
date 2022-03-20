@@ -1,47 +1,96 @@
 @charset "utf-8";
 
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Sriracha&display=swap');
+
 *{
     margin: 0px;
     padding: 0px;
+}
+
+html, body{
+    min-height: 100vh;
+    background-color: azure;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 header{
     background-color: black;
     color: white;
     width: 100%;
-    height: 200px;
+    text-align: center;
 }
 header > h1{
-    text-align: center;
-    padding-top: 50px;
+    font-family: 'Passion One', Arial, Helvetica, sans-serif;
+    font-size: 10vw;
+    font-variant: small-caps;/*Transforma as primeiras letras em maiúsculas*/
+    padding-top: 70px;
 }
 
-header h2{
-    text-align: center;
+header p{
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1em;
+    font-size: 2vw;
+    padding-bottom: 70px;
 }
-header a{
+
+header a, footer a{
+    font-weight: bolder;
     text-decoration: none;
     color: white;
 }
 
-.white {
+header a:hover, footer a:hover{
+    text-decoration: underline;
+}
+
+section p{
+    font-family: 'Sriracha', Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2.5em;
+    text-shadow: 2px 2px 1px rgba(0, 0, 0, 0.322);
+}
+
+section{
+    padding-top: 10vh;
+    padding-bottom: 10vh;
+    padding-left: 30px;
+    line-height: 5em;
+    font-size: 1.7vw;
+}
+
+section > p{
+    padding-bottom: 2em;
+}
+.white{
     background-color: white;
+}
+.imagem{
+    background-color: darkred;
+    color: white;
+    background-size: cover;
     background-attachment: fixed;
-    height:100vh;
+    box-shadow: inset 10px 5px 14px rgba(0, 0, 0, 0.452);
 }
 
-#joaninha{
-    background-color: black;
+.imagem p{
+    display: inline-block;
+    padding: 5px;
+    background-color: rgba(0, 0, 0, 0.493);
+}
+
+#img01{
     background-image: url('imagens/background001.jpg');
-    background-position: center center;
-    background-attachment: fixed;
-    background-repeat: no-repeat;
-    background-size: cover;
-    height: 100vh;
-}
-#folhas{
-    background: black url('imagens/background002.jpg') center center no-repeat fixed;
-    background-size: cover;
-    height: 100vh; 
+    background-position: center right;
 }
 
+#img02{
+    background-image: url('imagens/background002.jpg');
+    background-position: center right;   
+}
+
+footer{
+    text-align: center;
+    background-color: black;
+    color: white;
+    padding: 5px;
+}
