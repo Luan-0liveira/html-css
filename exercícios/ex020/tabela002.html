@@ -14,6 +14,13 @@
             width: 400px;
             height: 35px;
             border-collapse: collapse; /*juntar as celulas da tabela*/
+            position: relative;/*Ajuste para cabelho fixo*/
+        }
+
+        thead > tr > th{
+            position: sticky;/*cabeçalho fixo*/
+            top: -1px;
+            background-color: black;
         }
 
         td, th{
