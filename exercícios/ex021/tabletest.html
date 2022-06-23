@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Table005</title>
+    <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+        }
+        table{
+            width: 300px;
+            height: 300px;
+            border-collapse: collapse;
+        }
+        th, td{
+            border: 2px solid black;
+            padding: 2px;  
+            text-align: center; 
+            vertical-align: middle; /*alinhamento vertical*/
+        }
+        .cNome{
+            background-color: aquamarine;
+        }
+        .cSexo{
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+    <h1>Exercício de tabelas</h1>
+    <table>
+        <colgroup><!--Gerenciamento de colunas-->
+        <col class="cNome">
+        <col class="cSexo" span="2">
+        <col class="cProfissao">
+        </colgroup>
+        <caption style="font-size: 1.2em;">Cadastro</caption>
+        <tr>
+            <th scope="col">Nome</th>
+            <th scope="col">Sexo</th>
+            <th scope="col">Idade</th>
+            <th scope="col">Profissão</th>
+        </tr>
+        <tr>
+            <td>Maria</td>
+            <td>F</td>
+            <td>24</td>
+            <td>Jornalista</td>
+        </tr>
+        <tr>
+            <td>Marcos</td>
+            <td>M</td>
+            <td>24</td>
+            <td>Professor</td>
+        </tr>
+        <tr>
+            <td>Maicon</td>
+            <td>M</td>
+            <td>28</td>
+            <td>Programador</td>
+        </tr>
+        <tr>
+            <td>Milena</td>
+            <td>F</td>
+            <td>28</td>
+            <td>Designer</td>
+        </tr>
+    </table>
+</body>
+</html>
