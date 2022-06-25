@@ -6,9 +6,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Iframe 003</title>
     <style>
+        body{
+            font-family: 'Times New Roman', Times, serif;
+        }
         iframe{
             width: 98vw;
             height: 30vw;
+            font-family: Arial, Helvetica, sans-serif;
         }
     </style>
 </head>
@@ -21,7 +25,7 @@
         <li><a href="tables/table006.html" target="frame">Terceira</a></li>
     </ul>
     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum maxime sequi deserunt voluptate recusandae voluptas error animi quia facilis aut excepturi cupiditate quos, qui voluptatum vitae commodi reprehenderit praesentium officiis?</p>
-    <iframe src="" frameborder="0" name="frame"></iframe><!--Name é utilizado no target do link-->
+    <iframe srcdoc="<h1> Escolha uma das opções acima</h1>" frameborder="0" name="frame">Infelizmente seu navegador não é compativel com essa função</iframe><!--Name é utilizado no target do link-->
     <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Molestias quas ab laborum ullam in eveniet autem obcaecati, ipsam blanditiis ea architecto fugiat voluptates illo, debitis itaque tenetur dicta aliquid est! Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus maiores quas cupiditate veritatis quidem ex suscipit praesentium, illum natus dolorum! Quibusdam repellat magnam inventore, facilis vitae consequuntur et natus repudiandae.</p>
 </body>
 </html>
